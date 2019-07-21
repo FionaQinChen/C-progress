@@ -1,0 +1,23 @@
+1.找出正整数中偶数，并输出相加后的数，要用 long.
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	long a ;
+	scanf("%d",&a);
+	
+	int res = 0;
+	int sum = 0;
+	while(a){
+	    res = a % 10;
+	    if(res % 2 == 0){
+	        sum += res; 
+	    }
+	   res = 0; 
+	   a = a/10; 
+	}
+	
+	printf("%l",sum);    
+	
+	return 0;
+}
