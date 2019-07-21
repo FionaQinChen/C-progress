@@ -1,0 +1,14 @@
+5.判断从1990到2010年中的润年？并打印
+闰年：非整百年，能被4整除；
+
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	for(int year=1990;year<=2010;year++){
+	    if(year % 4 == 0 && year % 100 != 0)
+	        printf("%d is run nian",year);
+	        printf("\n");
+	}
+	return 0;
+}
