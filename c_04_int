@@ -1,0 +1,24 @@
+4、判断一个数是不是素数
+
+素数的含义：又称质数；质数定义为在大于1的自然数中，除了1和它本身以外不再有其他因数。
+
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int num;
+	scanf("%d",&num);
+	
+	int count=-1;
+	for(int i=1;i<num;i++){
+	    if(num%i==0)
+	        count++;
+	}
+	
+	if(count>0)
+	    printf("%d is not a sushu",num);
+	else
+	    printf("%d is a sushu",num);
+	
+	return 0;
+}
