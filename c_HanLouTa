@@ -1,0 +1,33 @@
+题目：汉诺塔原理
+
+#include<stdio.h>
+int count=0;
+void Hanota(int n,char a,char b,char c){
+   if(n==1)
+       platMove(a,c);
+   else{
+       //先借助c,将n-1移动到b上
+       Hanota(n-1,a,c,b);
+       
+       //把最后一个放到C
+       platMove(a,c);
+       
+       //n-1个盘子从b借助a放到c
+        Hanota(n-1,b,a,c);
+   }
+     
+ }
+
+void platMove(char a,char c){
+  count++;
+  printf("total:%3d:%c-->%c",count,a,c);
+  printf("\n");
+  
+}
+void main(){
+   //盘子总数
+   int n;
+   scanf("%d",&n);
+   Hanota(n,'A','B','C');
+}
+
